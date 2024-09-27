@@ -1,0 +1,377 @@
+/* General Styles */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Remove space after the navigation bar */
+body > *:first-child {
+    margin-top: 0;
+}
+
+.image-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Make it semi-transparent */
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+    z-index: 1000; /* Ensure navbar is above other elements */
+    margin-bottom: 0; /* No margin to prevent space after navbar */
+}
+
+/* Navbar Text Color */
+.nav-link {
+    color: black; /* Set the text color to black */
+    position: relative; /* Make it relative for the pop effect */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and pop effect */
+}
+
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+    color: rgb(8, 8, 227); /* Blue color when active or clicked */
+    transform: scale(1.05); /* Slightly enlarge the text when clicked */
+    text-decoration-color: beige;
+}
+
+.navbar-brand{
+
+    color: black; /* Ensure text is visible */ 
+    font-weight: bold;   
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.nav-link:hover {
+    color: rgb(252, 246, 246); /* Hover effect */
+}
+
+
+/* Image Container */
+.image-container {
+    position: relative;
+}
+
+/* Image Styles */
+.image-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Oval Button Styling */
+.btn0 {
+    background-color: rgb(34, 115, 202); /* Change to blue */
+    color: white; /* Text color */
+    padding: 10px 40px; /* Adjust padding to fit oval shape */
+    border: none;
+    border-radius: 50px; /* Rounded corners for oval shape */
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn0:hover {
+    background-color: rgb(51, 127, 209); /* Darker blue for hover effect */
+}
+
+
+.bold-heading {
+    font-weight: bold ;
+    text-align: center;   /* Makes the heading bold */
+}
+
+.button-overlay {
+
+    color: rgb(36, 36, 245);
+    position: absolute;
+    bottom: 20%; /* Distance from the bottom */
+    left: 50%;   /* Center horizontally */
+    transform: translate(-50%, 0); /* Adjust for center alignment */
+}
+.bold-heading {
+    font-weight: bold; /* Make the heading bold */
+    margin-top: 20px; /* Add some margin for spacing */
+}
+.btn-primary {
+    background-color: rgb(34, 115, 202); /* Original blue color */
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding */
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    color: white; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.btn-primary:hover {
+    background-color: rgb(51, 127, 209); /* Darker blue for hover */
+}
+
+.navbar-nav li {
+    list-style: none; /* Remove the bullet point */
+}
+
+.btn-register {
+    text-decoration: none; /* Remove any underline if it's treated as a link */
+}
+/* Bubble Container */
+.bubble-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px; /* Adjusts space between bubbles and the heading */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Individual Bubble */
+.bubble {
+    width: 50px;
+    height: 40px;
+    background-color: rgba(15, 72, 133, 0.884); /* Semi-transparent blue bubbles */
+    border-radius: 50%;
+    animation: float 10s infinite linear; /* Float animation */
+    opacity: 0.7;
+}
+
+/* Animate each bubble differently */
+.bubble:nth-child(1) {
+    animation-delay: 0s;
+}
+.bubble:nth-child(2) {
+    animation-delay: 2s;
+}
+.bubble:nth-child(3) {
+    animation-delay: 4s;
+}
+.bubble:nth-child(4) {
+    animation-delay: 6s;
+}
+.bubble:nth-child(5) {
+    animation-delay: 8s;
+}
+.bubble:nth-child(6) {
+        animation-delay: 10s;
+}
+.bubble:nth-child(7) {
+    animation-delay: 12s;
+}
+
+.bubble:nth-child(8) {
+    animation-delay: 14s;
+}
+
+/* Bubble Animation */
+@keyframes float {
+    0% {
+        transform: translateX(-100px);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+.Paragraph{
+    text-align: center;
+}
+
+.container {
+    display: flex; /* Use flexbox layout for boxes */
+    justify-content: space-between; /* Space boxes evenly */
+}
+
+.box {
+    background-color: #f0f0f0; /* Light grey background color */
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside the box */
+    text-align: center; /* Center text inside the box */
+    flex: 1; /* Make boxes flexible */
+    margin: 0 10px; /* Add margin between boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.box:first-child {
+    margin-left: 0; /* Remove left margin from the first box */
+}
+
+.box:last-child {
+    margin-right: 0; /* Remove right margin from the last box */
+}
+
+.registration-card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.card-img-left {
+    width: 50%; /* Adjusts the width of the image on the card */
+    object-fit: cover; /* Keeps the image proportional */
+    border-radius: 8px 0 0 8px; /* Rounded corners for image */
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+
+carousel-inner img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+}
+
+.carousel-indicators li {
+    background-color: #333; /* Custom indicator color */
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black controls */
+    border-radius: 50%;
+}
+
+/* Container for the registration form */
+.registration-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; /* Full viewport height */
+}
+
+/* Animated border around the form */
+form {
+    border: 5px solid transparent; 
+    border-radius: 10px; 
+    position: relative; 
+    padding: 20px; 
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+form::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    border-radius: 10px; 
+    background-image: linear-gradient(270deg, rgba(34, 115, 202, 0.6), rgba(34, 115, 202, 0.2), rgba(34, 115, 202, 0.6)); 
+    z-index: -1; 
+    animation: border-animation 2s linear infinite; 
+}
+
+/* Keyframes for border animation */
+@keyframes border-animation {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.05); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.stat-boxes {
+    display: flex; /* Align boxes in a row */
+    justify-content: space-around; /* Space out the boxes evenly */
+    flex-wrap: wrap; /* Wraps the boxes if the screen is too small */
+}
+
+.stat-box {
+    width: 200px; /* Adjust the width as needed */
+    background-color: white; /* White background */
+    border: 5px solid blue; /* Broad blue border */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text and icons */
+    padding: 20px; /* Padding inside the boxes */
+    margin: 10px; /* Margin between boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    opacity: 0; /* Start hidden for animation */
+    transform: scale(0); /* Start small for animation */
+    animation: pop-up 0.5s forwards; /* Trigger pop-up animation */
+}
+
+.stat-boxes {
+    display: flex; /* Align boxes in a row */
+    justify-content: space-around; /* Space out the boxes evenly */
+    flex-wrap: wrap; /* Wraps the boxes if the screen is too small */
+}
+.stat-box i {
+    font-size: 40px; /* Adjust icon size */
+    color: darkblue; /* Dark blue color for icons */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.stat-box p {
+    color: darkblue; /* Dark blue text color */
+    font-weight: bold; /* Bold text */
+}
+
+.stat-box span.count {
+    display: block; /* Make count display on a new line */
+    font-size: 24px; /* Font size for count */
+    margin-top: 5px; /* Space above the count */
+}
+
+/* Animation for popping up the boxes */
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0.5; /* Fade in slightly */
+        transform: scale(1.1); /* Scale up slightly */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Return to original size */
+    }
+}
+
+/* Adjust media queries if needed for responsiveness */
+@media (max-width: 768px) {
+    .stat-box {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Navbar Toggle Icon */
+.navbar-toggler-icon {
+    font-size: 24px;
+    color: rgb(28, 35, 231);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
